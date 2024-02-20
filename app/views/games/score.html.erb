@@ -1,0 +1,16 @@
+<div class="container mt-5 text-center">
+  <% if @include %>
+    <% if @english_word %>
+      <h1>Yaaay You Win!🏆</h1>
+      <p>Your score is <%= @scores %>!</p>
+    <% else %>
+      <h1>Sorry 😞</h1>
+      <p><%= @word %> is not an English word.</p>
+    <% end %>
+  <% else %>
+    <h1>Sorry 😞</h1>
+    <p><%= @word %> is not valid.</p>
+  <% end %>
+
+  <%= link_to "Play again!", new_path, :class => "btn btn-success"%>
+</div>
